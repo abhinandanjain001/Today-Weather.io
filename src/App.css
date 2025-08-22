@@ -1,42 +1,61 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+/* General reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* Make layout flexible */
+.container {
+  width: 100%;
+  max-width: 1200px; /* keeps design centered */
+  margin: auto;
+  padding: 1rem;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Text scaling */
+h1, h2, h3, p {
+  word-wrap: break-word;
+}
+
+/* Image scaling */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .container {
+    padding: 0.5rem;
   }
-  to {
-    transform: rotate(360deg);
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  /* Example: buttons or cards stack */
+  .card-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem;
   }
-}
 
-.card {
-  padding: 2em;
-}
+  p {
+    font-size: 0.9rem;
+  }
 
-.read-the-docs {
-  color: #888;
+  button {
+    width: 100%; /* full width buttons on mobile */
+  }
 }
